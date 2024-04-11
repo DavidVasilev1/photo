@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="{{site.baseurl}}/assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Work+Sans&display=swap" rel="stylesheet">
     <title></title>
     <!-- CSS Files -->
     <link href="{{site.baseurl}}/assets/css/main.css" rel="stylesheet" />
  </head>
   <body>
-    {% include header.html %}
     <main>
-      {{ content }}
+      <div class="relative">
+        {% include header.html %}
+        {{ content }}
+      </div>
     </main>
   </body>
 </html>

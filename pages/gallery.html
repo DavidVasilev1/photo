@@ -1,0 +1,123 @@
+---
+layout: default
+title: Gallery
+---
+
+<style>
+    .image-column {
+        float: left;
+        width: calc(33.33% - 8px);
+        margin-right: 9px;
+        margin-bottom: 16px;
+    }
+
+    .image-column:last-child {
+        margin-right: 0;
+    }
+
+    .image-column img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .btn.active {
+        background-color: #6b7280;
+        color: white;
+    }
+
+    .btn:hover {
+        background-color: #6b7280;
+    }
+</style>
+
+<div class="mt-16 px-4 sm:px-6 lg:px-8 lg:ml-[16vw] lg:mr-[16vw]">
+    <h1 class="font-oxygen text-4xl font-light ml-auto mr-auto text-center mt-10 mb-3">Gallery</h1>
+    <div class="divider"></div>
+
+    <!-- Category Bar -->
+    <div class="btn-group btn-group-block mb-4 text-center">
+        <button class="btn btn-outline text-md font-oxygen font-light" onclick="filterImages('people')">People</button>
+        <button class="btn btn-outline text-md font-oxygen font-light" onclick="filterImages('cars')">Cars</button>
+        <button class="btn btn-outline text-md font-oxygen font-light"
+            onclick="filterImages('animals')">Animals</button>
+        <button class="btn btn-outline text-md font-oxygen font-light"
+            onclick="filterImages('landscapes')">Landscapes</button>
+        <button class="btn btn-outline text-md font-oxygen font-light" onclick="filterImages('random')">Random</button>
+    </div>
+
+    <div class="image-column clearfix">
+        <img src="/assets/img/gallery/animals/IMG_0579.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/random/IMG_3306.jpg" class="p-1 w-full h-auto" data-category="random">
+        <img src="/assets/img/gallery/random/IMG_5103.jpg" class="p-1 w-full h-auto" data-category="random">
+        <img src="/assets/img/gallery/animals/IMG_2174.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/people/IMG_5954.jpg" class="p-1 w-full h-auto" data-category="people">
+        <img src="/assets/img/gallery/animals/IMG_4288.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/landscapes/IMG_7374.jpg" class="p-1 w-full h-auto" data-category="landscapes">
+        <img src="/assets/img/gallery/cars/IMG_7003.jpg" class="p-1 w-full h-auto" data-category="cars">
+        <img src="/assets/img/gallery/animals/IMG_5477.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/people/IMG_3929.jpg" class="p-1 w-full h-auto" data-category="people">
+        <img src="/assets/img/gallery/landscapes/IMG_7515.jpg" class="p-1 w-full h-auto" data-category="landscapes">
+        <img src="/assets/img/gallery/cars/IMG_6153.jpg" class="p-1 w-full h-auto" data-category="cars">
+    </div>
+    <!-- Second Column -->
+    <div class="image-column clearfix">
+        <img src="/assets/img/gallery/cars/IMG_6113.jpg" class="p-1 w-full h-auto" data-category="cars">
+        <img src="/assets/img/gallery/random/IMG_4274.jpg" class="p-1 w-full h-auto" data-category="random">
+        <img src="/assets/img/gallery/animals/IMG_4498.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/cars/IMG_6987.jpg" class="p-1 w-full h-auto" data-category="cars">
+        <img src="/assets/img/gallery/people/IMG_3904.jpg" class="p-1 w-full h-auto" data-category="people">
+        <img src="/assets/img/gallery/animals/IMG_6403.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/people/IMG_5963.jpg" class="p-1 w-full h-auto" data-category="people">
+        <img src="/assets/img/gallery/random/IMG_2264.jpg" class="p-1 w-full h-auto" data-category="random">
+        <img src="/assets/img/gallery/animals/IMG_5329.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/landscapes/IMG_2298.jpg" class="p-1 w-full h-auto" data-category="landscapes">
+
+        <img src="/assets/img/gallery/animals/IMG_8877.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/people/IMG_5969.jpg" class="p-1 w-full h-auto" data-category="people">
+
+    </div>
+    <!-- Third Column -->
+    <div class="image-column clearfix">
+
+        <img src="/assets/img/gallery/landscapes/IMG_7086.jpg" class="p-1 w-full h-auto" data-category="landscapes">
+        <img src="/assets/img/gallery/animals/IMG_6412.jpg" class="p-1 w-full h-auto" data-category="animals">
+
+        <img src="/assets/img/gallery/animals/IMG_6385.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/cars/IMG_7010.jpg" class="p-1 w-full h-auto" data-category="cars">
+        <img src="/assets/img/gallery/people/IMG_3915.jpg" class="p-1 w-full h-auto" data-category="people">
+        <img src="/assets/img/gallery/random/IMG_0892.jpg" class="p-1 w-full h-auto" data-category="random">
+        <img src="/assets/img/gallery/animals/IMG_6373.jpg" class="p-1 w-full h-auto" data-category="animals">
+        <img src="/assets/img/gallery/people/IMG_5959.jpg" class="p-1 w-full h-auto" data-category="people">
+        <img src="/assets/img/gallery/cars/IMG_6162.jpg" class="p-1 w-full h-auto" data-category="cars">
+
+        <img src="/assets/img/gallery/cars/IMG_6115.jpg" class="p-1 w-full h-auto" data-category="cars">
+    </div>
+</div>
+
+<script>
+    function filterImages(category) {
+        let buttons = document.querySelectorAll('.btn-group button');
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        event.target.classList.add('active');
+
+        let images = document.querySelectorAll('img[data-category]');
+        images.forEach(image => {
+            image.style.display = 'none';
+        });
+
+        let categoryImages = document.querySelectorAll(`img[data-category="${category}"]`);
+        categoryImages.forEach(image => {
+            image.style.display = 'block';
+        });
+    }
+</script>

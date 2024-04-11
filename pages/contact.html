@@ -1,0 +1,244 @@
+---
+layout: default
+title: Contact
+---
+<div class="mt-16 mb-10 px-4 sm:px-6 lg:px-8 lg:ml-[16vw] lg:mr-[16vw]">
+    <h1 class="text-center font-oxygen text-4xl font-light mt-10 mb-3">Contact</h1>
+    <div class="divider"></div>
+    <div class="flex justify-center items-center h-full">
+        <div>
+            <form id="contactForm" method="post">
+                <div class="flex justify-center items-center mt-10">
+                    <div class="w-96 max-w-md p-6 bg-white rounded-lg shadow-lg">
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text">Name</span>
+                            </label>
+                            <input type="text" name="name" class="input input-bordered" placeholder="Name" required/>
+                        </div>
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text font-oxygen font-light">Email</span>
+                            </label>
+                            <input type="email" name="email" class="input input-bordered" placeholder="name@site.com" required/>
+                        </div>
+                        <div class="form-control mb-4">
+                            <label class="label">
+                                <span class="label-text font-oxygen font-light">Questions/Comments</span>
+                            </label>
+                            <textarea name="message" class="textarea textarea-bordered font-oxygen font-light" placeholder="Questions/Comments" required></textarea>
+                        </div>
+                        <button type="button" id="submitButton" class="btn btn-primary w-full font-oxygen font-light">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="pl-200 ml-10 mr-5 flex justify-center">
+            <div>
+                <h2 class="card-title font-oxygen font-bold text-2xl">Feel Free to Message Me</h2>
+                <p class="font-oxygen font-light">Ask questions on what I offer or reserve a session here! I'm always happy to chat about photography, scheduling, or any other inquiries you may have.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-16 mb-10 px-4 sm:px-6 lg:px-8 lg:ml-[16vw] lg:mr-[16vw]">
+    <h1 class="text-center font-oxygen text-4xl font-light mt-10 mb-3">Packages</h1>
+    <div class="divider"></div>
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <!-- Basic Package -->
+        <div class="card bg-base-200 rounded-box">
+            <div class="card-body">
+                <h2 class="text-center font-oxygen text-2xl font-extrabold mb-6">Basic</h2>
+                <div class="text-center mb-6">
+                    <span class="text-blue-500 font-bold text-5xl">$80</span>
+                    <p class="font-oxygen font-bold text-gray-400 text-center">Base Price</p>
+                </div>
+                <p class="font-oxygen font-light text-center mb-2">$25 per image</p>
+                <p class="font-oxygen font-light text-center mb-2">Maximum 9 images + 1 free image</p>
+                <div class="text-center">
+                    <p class="font-oxygen font-light text-center mb-2">Optional: $40 basic editing
+                        <button onclick="description.showModal()">
+                            <svg class="inline-block h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" width="12"
+                                height="12" viewBox="0 0 48 48">
+                                <path fill-rule="evenodd"
+                                    d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M12.0003283,16.9983464 C11.4478622,16.9983464 11,16.5506311 11,15.9983464 C11,15.4460616 11.4478622,14.9983464 12.0003283,14.9983464 C12.5527943,14.9983464 13.0006565,15.4460616 13.0006565,15.9983464 C13.0006565,16.5506311 12.5527943,16.9983464 12.0003283,16.9983464 Z M13,14 L11,14 C11,12.2983529 11.6245803,11.5696759 13.0527864,10.8555728 C13.8745803,10.4446759 14,10.2983529 14,9.5 C14,8.556407 13.2771608,8 12,8 C10.8954305,8 10,8.8954305 10,10 L8,10 C8,7.790861 9.790861,6 12,6 C14.2843464,6 16,7.32062807 16,9.5 C16,11.2016471 15.3754197,11.9303241 13.9472136,12.6444272 C13.1254197,13.0553241 13,13.2016471 13,14 Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </p>
+                </div>
+                <p class="font-oxygen font-light text-sm text-gray-400 text-center">All images come with watermarks</p>
+            </div>
+        </div>
+        <dialog id="description" class="modal flex justify-center items-center">
+            <div class="modal-box w-full max-w-3xl">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <h1 class="font-bold text-5xl mb-6 font-oxygen text-center">Basic Editing</h1>
+                <div class="flex flex-col justify-center items-center lg:flex-row">
+                    <div class="lg:w-1/2 flex flex-col justify-center items-center">
+                        <ul class="list-disc pl-8 font-oxygen font-light">
+                            <li>Light correction</li>
+                            <li>Color Adjustment</li>
+                            <li>Cropping</li>
+                            <li>Sharpening</li>
+                            <li>Basic Retouch</li>
+                        </ul>
+                    </div>
+                    <div class="diff aspect-[3/4] ml-6 rounded-box">
+                        <div class="diff-item-1">
+                            <img class="h-50" src="/assets/img/example/basic_edit.jpg" />
+                            <div class="text-3xl font-black text-gray-300 grid place-content-center">After</div>
+                        </div>
+                        <div class="diff-item-2">
+                            <img class="h-50" src="/assets/img/example/no_edit.jpg" />
+                            <div class="text-3xl font-black text-gray-300 grid place-content-center">Before</div>
+                        </div>
+                        <div class="diff-resizer"></div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Premium Package -->
+        <div class="card bg-base-300 rounded-box border border-base-500 shadow-lg">
+            <div class="card-body">
+                <h2 class="text-center font-oxygen text-2xl font-extrabold mb-6">Premium</h2>
+                <div class="text-center mb-6">
+                    <span class="text-blue-500 font-bold text-5xl">$120</span>
+                    <p class="font-oxygen font-bold text-gray-400 text-center">Base Price</p>
+                </div>
+                <p class="font-oxygen font-light text-center mb-2">$20 per image</p>
+                <p class="font-oxygen font-light text-center mb-2">Maximum 21 images + 4 free images</p>
+                <div class="text-center">
+                    <p class="font-oxygen font-light text-center mb-2">Optional: $80 advanced editing
+                        <button onclick="description2.showModal()">
+                            <svg class="inline-block h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" width="12"
+                                height="12" viewBox="0 0 48 48">
+                                <path fill-rule="evenodd"
+                                    d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M12.0003283,16.9983464 C11.4478622,16.9983464 11,16.5506311 11,15.9983464 C11,15.4460616 11.4478622,14.9983464 12.0003283,14.9983464 C12.5527943,14.9983464 13.0006565,15.4460616 13.0006565,15.9983464 C13.0006565,16.5506311 12.5527943,16.9983464 12.0003283,16.9983464 Z M13,14 L11,14 C11,12.2983529 11.6245803,11.5696759 13.0527864,10.8555728 C13.8745803,10.4446759 14,10.2983529 14,9.5 C14,8.556407 13.2771608,8 12,8 C10.8954305,8 10,8.8954305 10,10 L8,10 C8,7.790861 9.790861,6 12,6 C14.2843464,6 16,7.32062807 16,9.5 C16,11.2016471 15.3754197,11.9303241 13.9472136,12.6444272 C13.1254197,13.0553241 13,13.2016471 13,14 Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </p>
+                </div>
+                <p class="font-oxygen font-light text-sm text-gray-400 text-center">All images come with watermarks</p>
+            </div>
+        </div>
+        <dialog id="description2" class="modal flex justify-center items-center">
+            <div class="modal-box w-full max-w-3xl">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <h1 class="font-bold text-5xl mb-6 font-oxygen text-center">Advanced Editing</h1>
+                <div class="flex flex-col justify-center items-center lg:flex-row">
+                    <div class="lg:w-1/2 flex flex-col justify-center items-center">
+                        <ul class="list-disc pl-8 font-oxygen font-light">
+                            <li>Light correction</li>
+                            <li>Color Adjustment</li>
+                            <li>Color Grading</li>
+                            <li>Cropping</li>
+                            <li>Sharpening</li>
+                            <li>Basic Retouch</li>
+                            <li>Stylizing</li>
+                        </ul>
+                    </div>
+                    <div class="diff aspect-[3/4] ml-3 rounded-box">
+                        <div class="diff-item-1">
+                            <img class="h-50" src="/assets/img/example/advanced_edit.jpg" />
+                            <div class="text-3xl font-black text-gray-300 grid place-content-center">After</div>
+                        </div>
+                        <div class="diff-item-2">
+                            <img class="h-50" src="/assets/img/example/no_edit.jpg" />
+                            <div class="text-3xl font-black text-gray-300 grid place-content-center">Before</div>
+                        </div>
+                        <div class="diff-resizer"></div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Pro Package -->
+        <div class="card bg-base-200 rounded-box">
+            <div class="card-body">
+                <h2 class="text-center font-oxygen text-2xl font-extrabold mb-6">Pro</h2>
+                <div class="text-center mb-6">
+                    <span class="text-blue-500 font-bold text-5xl">$200</span>
+                    <p class="font-oxygen font-bold text-gray-400 text-center">Base Price</p>
+                </div>
+                <p class="font-oxygen font-light text-center mb-2">$13 per image</p>
+                <p class="font-oxygen font-light text-center mb-2">Maximum 21 images + 4 free images</p>
+                <div class="text-center">
+                    <p class="font-oxygen font-light text-center mb-2">Optional: $140 professional editing
+                        <button onclick="description3.showModal()">
+                            <svg class="inline-block h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" width="12"
+                                height="12" viewBox="0 0 48 48">
+                                <path fill-rule="evenodd"
+                                    d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M12.0003283,16.9983464 C11.4478622,16.9983464 11,16.5506311 11,15.9983464 C11,15.4460616 11.4478622,14.9983464 12.0003283,14.9983464 C12.5527943,14.9983464 13.0006565,15.4460616 13.0006565,15.9983464 C13.0006565,16.5506311 12.5527943,16.9983464 12.0003283,16.9983464 Z M13,14 L11,14 C11,12.2983529 11.6245803,11.5696759 13.0527864,10.8555728 C13.8745803,10.4446759 14,10.2983529 14,9.5 C14,8.556407 13.2771608,8 12,8 C10.8954305,8 10,8.8954305 10,10 L8,10 C8,7.790861 9.790861,6 12,6 C14.2843464,6 16,7.32062807 16,9.5 C16,11.2016471 15.3754197,11.9303241 13.9472136,12.6444272 C13.1254197,13.0553241 13,13.2016471 13,14 Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </p>
+                </div>
+                <p class="font-oxygen font-light text-sm text-gray-400 text-center">No watermarks on images</p>
+            </div>
+        </div>
+        <dialog id="description3" class="modal flex justify-center items-center">
+            <div class="modal-box w-full max-w-3xl">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <h1 class="font-bold text-5xl mb-6 font-oxygen text-center">Professional Editing</h1>
+                <div class="flex flex-col justify-center items-center lg:flex-row">
+                    <div class="lg:w-1/2 flex flex-col justify-center items-center">
+                        <ul class="list-disc pl-8 font-oxygen font-light">
+                            <li>Light correction</li>
+                            <li>Color Adjustment</li>
+                            <li>Color Grading</li>
+                            <li>Cropping</li>
+                            <li>Sharpening</li>
+                            <li>Basic Retouch</li>
+                            <li>Stylizing</li>
+                            <li>Composition Editing</li>
+                            <li>Object Removal</li>
+                        </ul>
+                    </div>
+                    <div class="diff aspect-[3/4] ml-3 rounded-box">
+                        <div class="diff-item-1">
+                            <img class="h-50" src="/assets/img/example/professional_edit.jpg" />
+                            <div class="text-3xl font-black text-gray-300 grid place-content-center">After</div>
+                        </div>
+                        <div class="diff-item-2">
+                            <img class="h-50" src="/assets/img/example/no_edit.jpg" />
+                            <div class="text-3xl font-black text-gray-300 grid place-content-center">Before</div>
+                        </div>
+                        <div class="diff-resizer"></div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </div>
+</div>
+
+<script>
+    document.getElementById("submitButton").addEventListener("click", function() {
+        var form = document.getElementById("contactForm");
+        var formData = new FormData(form);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "send_email.php", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert(xhr.responseText);
+                    form.reset(); // Clear the form after successful submission
+                } else {
+                    alert("Oops! Something went wrong. Please try again later.");
+                }
+            }
+        };
+        xhr.send(formData);
+    });
+</script>

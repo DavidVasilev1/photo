@@ -2,33 +2,34 @@
 layout: default
 title: Contact
 ---
+<!DOCTYPE html>
 <div class="mt-16 mb-10 px-4 sm:px-6 lg:px-8 lg:ml-[16vw] lg:mr-[16vw]">
     <h1 class="text-center font-oxygen text-4xl font-light mt-10 mb-3">Contact</h1>
     <div class="divider"></div>
     <div class="flex justify-center items-center h-full">
         <div>
-            <form id="contactForm" method="post">
+            <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdGfQB4XpWGS1XMCHDivAhyl5PdfXTCvOLuk4H7fbUhO0Owag/formResponse">
                 <div class="flex justify-center items-center mt-10">
                     <div class="w-96 max-w-md p-6 bg-white rounded-lg shadow-lg">
                         <div class="form-control mb-4">
                             <label class="label">
                                 <span class="label-text">Name</span>
                             </label>
-                            <input type="text" name="name" class="input input-bordered" placeholder="Name" required/>
+                            <input type="text" name="entry.1003325430" class="input input-bordered" placeholder="Name" required/>
                         </div>
                         <div class="form-control mb-4">
                             <label class="label">
                                 <span class="label-text font-oxygen font-light">Email</span>
                             </label>
-                            <input type="email" name="email" class="input input-bordered" placeholder="name@site.com" required/>
+                            <input type="email" name="entry.1292940360" class="input input-bordered" placeholder="name@site.com" required/>
                         </div>
                         <div class="form-control mb-4">
                             <label class="label">
                                 <span class="label-text font-oxygen font-light">Questions/Comments</span>
                             </label>
-                            <textarea name="message" class="textarea textarea-bordered font-oxygen font-light" placeholder="Questions/Comments" required></textarea>
+                            <textarea name="entry.1062503765" class="textarea textarea-bordered font-oxygen font-light" placeholder="Questions/Comments" required></textarea>
                         </div>
-                        <button type="button" id="submitButton" class="btn btn-primary w-full font-oxygen font-light">Submit</button>
+                        <button type="button" class="btn btn-primary w-full font-oxygen font-light" onclick="clearForm()">Submit</button>
                     </div>
                 </div>
             </form>
@@ -221,24 +222,12 @@ title: Contact
         </dialog>
     </div>
 </div>
-
 <script>
-    document.getElementById("submitButton").addEventListener("click", function() {
-        var form = document.getElementById("contactForm");
-        var formData = new FormData(form);
+    function clearForm() {
+        // Get the form element
+        var form = document.getElementById('contactForm');
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "send_email.php", true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    alert(xhr.responseText);
-                    form.reset(); // Clear the form after successful submission
-                } else {
-                    alert("Oops! Something went wrong. Please try again later.");
-                }
-            }
-        };
-        xhr.send(formData);
-    });
+        // Reset the form
+        form.reset();
+    }
 </script>

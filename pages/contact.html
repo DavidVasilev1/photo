@@ -8,7 +8,7 @@ title: Contact
     <div class="divider"></div>
     <div class="flex justify-center items-center h-full">
         <div>
-            <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdGfQB4XpWGS1XMCHDivAhyl5PdfXTCvOLuk4H7fbUhO0Owag/formResponse">
+            <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdGfQB4XpWGS1XMCHDivAhyl5PdfXTCvOLuk4H7fbUhO0Owag/formResponse" method="post">
                 <div class="flex justify-center items-center mt-10">
                     <div class="w-96 max-w-md p-6 bg-white rounded-lg shadow-lg">
                         <div class="form-control mb-4">
@@ -29,10 +29,10 @@ title: Contact
                             </label>
                             <textarea name="entry.1062503765" class="textarea textarea-bordered font-oxygen font-light" placeholder="Questions/Comments" required></textarea>
                         </div>
-                        <button type="button" class="btn btn-primary w-full font-oxygen font-light" onclick="clearForm()">Submit</button>
                     </div>
                 </div>
             </form>
+            <button type="button" class="btn btn-primary w-full font-oxygen font-light" onclick="submitForm()">Submit</button>
         </div>
         <div class="pl-200 ml-10 mr-5 flex justify-center">
             <div>
@@ -223,11 +223,26 @@ title: Contact
     </div>
 </div>
 <script>
-    function clearForm() {
-        // Get the form element
-        var form = document.getElementById('contactForm');
-
-        // Reset the form
-        form.reset();
+    function submitForm() {
+        // Get the form data
+        var formData = new FormData(document.getElementById('contactForm'));
+        
+        // Send the form data using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdGfQB4XpWGS1XMCHDivAhyl5PdfXTCvOLuk4H7fbUhO0Owag/formResponse');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Form submission successful
+                    alert('Form submitted successfully!');
+                    // Clear the form
+                    document.getElementById('contactForm').reset();
+                } else {
+                    // Form submission failed
+                    alert('Form submission failed. Please try again later.');
+                }
+            }
+        };
+        xhr.send(formData);
     }
 </script>

@@ -50,48 +50,53 @@ title: Contact
 <div class="mt-16 mb-10 px-4 sm:px-6 lg:px-8 lg:ml-[16vw] lg:mr-[16vw]">
     <h1 class="text-center font-oxygen text-4xl font-light mt-10 mb-3">Packages</h1>
     <div class="divider"></div>
-
-    <h1 class="text-center mb-3">
-        
-    </h1>
-
     <!-- Pricing cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 items-start px-2 gap-8">
         <!-- Price -->
-        <div class="flex flex-col gap-6 bg-base-200 rounded-box p-8">
-            <div class="flex flex-col gap-4 text-center">
-                <h2 class="text-center font-oxygen text-2xl font-extrabold mb-2">Basic</h2>
-                <div class="text-center mb-2">
-                    <span class="text-blue-500 font-bold text-5xl">$80</span>
-                    <div class="font-oxygen font-bold text-gray-400 text-center">Base Price</div>
+        <div class="relative">
+            <div class="flex flex-col gap-6 bg-base-200 rounded-box p-8">
+                <div class="flex flex-col gap-4 text-center">
+                    <h2 class="text-center font-oxygen text-2xl font-extrabold mb-2">Basic</h2>
+                    <div class="text-center mb-2">
+                        <span class="text-blue-500 font-bold text-5xl">$80</span>
+                        <div class="font-oxygen font-bold text-gray-400 text-center">Base Price</div>
+                    </div>
+                </div>
+    
+                <!-- Features -->
+                <div class="flex flex-col justify-center"> <!-- Added justify-center here -->
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        1 free image
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        Up to 9 extra images
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        $25 per image
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        Additional: $40 basic editing
+                        <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-info" onclick="description.showModal()">
+                            <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-sm text-gray-400 text-center justify-center">
+                        All images come with watermarks
+                    </div>
                 </div>
             </div>
-
-            <!-- Features -->
-            <div class="flex flex-col justify-center"> <!-- Added justify-center here -->
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    1 free image
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    Up to 9 extra images
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    $25 per image
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    Additional: $40 basic editing
-                    <button onclick="description.showModal()">
-                        <svg class="inline-block h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" width="12"
-                            height="12" viewBox="0 0 48 48">
-                            <path fill-rule="evenodd"
-                                d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M12.0003283,16.9983464 C11.4478622,16.9983464 11,16.5506311 11,15.9983464 C11,15.4460616 11.4478622,14.9983464 12.0003283,14.9983464 C12.5527943,14.9983464 13.0006565,15.4460616 13.0006565,15.9983464 C13.0006565,16.5506311 12.5527943,16.9983464 12.0003283,16.9983464 Z M13,14 L11,14 C11,12.2983529 11.6245803,11.5696759 13.0527864,10.8555728 C13.8745803,10.4446759 14,10.2983529 14,9.5 C14,8.556407 13.2771608,8 12,8 C10.8954305,8 10,8.8954305 10,10 L8,10 C8,7.790861 9.790861,6 12,6 C14.2843464,6 16,7.32062807 16,9.5 C16,11.2016471 15.3754197,11.9303241 13.9472136,12.6444272 C13.1254197,13.0553241 13,13.2016471 13,14 Z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-sm text-gray-400 text-center justify-center">
-                    All images come with watermarks
-                </div>
+            <div class="absolute top-0 right-0 mr-2 mt-2">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-info">
+                      <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div tabindex="0" class="card compact dropdown-content z-[1] shadow bg-base-100 rounded-box w-64">
+                      <div tabindex="0" class="card-body">
+                        <h2 class="card-title">Who should get this?</h2> 
+                        <p>This package is great for those who are on a budget or aren't looking for something too fancy!</p>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
         <dialog id="description" class="modal flex justify-center items-center">
@@ -126,46 +131,58 @@ title: Contact
         </dialog>
 
         <!-- Price (Most popular) -->
-        <div class="flex flex-col gap-6 bg-base-300 rounded-box p-8 border border-info shadow-lg">
+        <div class="relative">
+            <div class="flex flex-col gap-6 bg-base-300 rounded-box p-8 border border-info shadow-lg">
 
-            <div class="flex flex-col gap-4 text-center">
-                <h2 class="text-center font-oxygen text-2xl font-extrabold mb-6">Premium</h2>
-                <div class="text-center mb-2">
-                    <span class="text-blue-500 font-bold text-5xl">$120</span>
-                    <div class="font-oxygen font-bold text-gray-400 text-center">Base Price</div>
+                <div class="flex flex-col gap-4 text-center">
+                    <h2 class="text-center font-oxygen text-2xl font-extrabold mb-6">Premium</h2>
+                    <div class="text-center mb-2">
+                        <span class="text-blue-500 font-bold text-5xl">$120</span>
+                        <div class="font-oxygen font-bold text-gray-400 text-center">Base Price</div>
+                    </div>
+                    <div class="badge badge-info self-center text-center badge-lg">
+                        Popular
+                    </div>
                 </div>
-                <div class="badge badge-info self-center text-center badge-lg">
-                    Popular
+    
+                <!-- Features -->
+                <div class="flex flex-col">
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        4 free images
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        Up to 21 extra images
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        $20 per image
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        Additional: $80 advanced editing
+                        <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-info" onclick="description2.showModal()">
+                            <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-sm text-gray-400 text-center justify-center">
+                        All images come with watermarks
+                    </div>
                 </div>
             </div>
-
-            <!-- Features -->
-            <div class="flex flex-col">
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    4 free images
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    Up to 21 extra images
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    $20 per image
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    Additional: $80 advanced editing
-                    <button onclick="description2.showModal()">
-                        <svg class="inline-block h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" width="12"
-                            height="12" viewBox="0 0 48 48">
-                            <path fill-rule="evenodd"
-                                d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M12.0003283,16.9983464 C11.4478622,16.9983464 11,16.5506311 11,15.9983464 C11,15.4460616 11.4478622,14.9983464 12.0003283,14.9983464 C12.5527943,14.9983464 13.0006565,15.4460616 13.0006565,15.9983464 C13.0006565,16.5506311 12.5527943,16.9983464 12.0003283,16.9983464 Z M13,14 L11,14 C11,12.2983529 11.6245803,11.5696759 13.0527864,10.8555728 C13.8745803,10.4446759 14,10.2983529 14,9.5 C14,8.556407 13.2771608,8 12,8 C10.8954305,8 10,8.8954305 10,10 L8,10 C8,7.790861 9.790861,6 12,6 C14.2843464,6 16,7.32062807 16,9.5 C16,11.2016471 15.3754197,11.9303241 13.9472136,12.6444272 C13.1254197,13.0553241 13,13.2016471 13,14 Z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-sm text-gray-400 text-center justify-center">
-                    All images come with watermarks
-                </div>
+            <div class="absolute top-0 right-0 mr-2 mt-2">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-info">
+                      <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div tabindex="0" class="card compact dropdown-content z-[1] shadow bg-base-100 rounded-box w-64">
+                      <div tabindex="0" class="card-body">
+                        <h2 class="card-title">Who should get this?</h2> 
+                        <p>This package is great for those who are looking for a balance between professionalism and a wallet-friendly price!</p>
+                      </div>
+                    </div>
+                  </div>
             </div>
+
         </div>
+        
         <dialog id="description2" class="modal flex justify-center items-center">
             <div class="modal-box w-full max-w-3xl">
                 <form method="dialog">
@@ -200,40 +217,50 @@ title: Contact
         </dialog>
 
         <!-- Price -->
-        <div class="flex flex-col gap-6 bg-base-200 rounded-box p-8">
-            <div class="flex flex-col gap-4 text-center">
-                <h2 class="text-center font-oxygen text-2xl font-extrabold mb-2">Pro</h2>
-                <div class="text-center mb-2">
-                    <span class="text-blue-500 font-bold text-5xl">$200</span>
-                    <div class="font-oxygen font-bold text-gray-400 text-center">Base Price</div>
+        <div class="relative">
+            <div class="flex flex-col gap-6 bg-base-200 rounded-box p-8">
+                <div class="flex flex-col gap-4 text-center">
+                    <h2 class="text-center font-oxygen text-2xl font-extrabold mb-2">Pro</h2>
+                    <div class="text-center mb-2">
+                        <span class="text-blue-500 font-bold text-5xl">$200</span>
+                        <div class="font-oxygen font-bold text-gray-400 text-center">Base Price</div>
+                    </div>
+                </div>
+    
+                <!-- Features -->
+                <div class="flex flex-col">
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        4 free images
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        Up to 21 extra images
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        $13 per image
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-center justify-center">
+                        Additional: $140 professional editing
+                        <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-info" onclick="description3.showModal()">
+                            <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex mb-3 font-oxygen font-light text-sm text-gray-400 text-center justify-center">
+                        No watermarks on images
+                    </div>
                 </div>
             </div>
-
-            <!-- Features -->
-            <div class="flex flex-col">
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    4 free images
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    Up to 21 extra images
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    $13 per image
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-center justify-center">
-                    Additional: $140 professional editing
-                    <button onclick="description3.showModal()">
-                        <svg class="inline-block h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" width="12"
-                            height="12" viewBox="0 0 48 48">
-                            <path fill-rule="evenodd"
-                                d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M12.0003283,16.9983464 C11.4478622,16.9983464 11,16.5506311 11,15.9983464 C11,15.4460616 11.4478622,14.9983464 12.0003283,14.9983464 C12.5527943,14.9983464 13.0006565,15.4460616 13.0006565,15.9983464 C13.0006565,16.5506311 12.5527943,16.9983464 12.0003283,16.9983464 Z M13,14 L11,14 C11,12.2983529 11.6245803,11.5696759 13.0527864,10.8555728 C13.8745803,10.4446759 14,10.2983529 14,9.5 C14,8.556407 13.2771608,8 12,8 C10.8954305,8 10,8.8954305 10,10 L8,10 C8,7.790861 9.790861,6 12,6 C14.2843464,6 16,7.32062807 16,9.5 C16,11.2016471 15.3754197,11.9303241 13.9472136,12.6444272 C13.1254197,13.0553241 13,13.2016471 13,14 Z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex mb-3 font-oxygen font-light text-sm text-gray-400 text-center justify-center">
-                    No watermarks on images
-                </div>
+            <div class="absolute top-0 right-0 mr-2 mt-2">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-info">
+                      <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div tabindex="0" class="card compact dropdown-content z-[1] shadow bg-base-100 rounded-box w-64">
+                      <div tabindex="0" class="card-body">
+                        <h2 class="card-title">Who should get this?</h2> 
+                        <p>This package is great for those who are looking for professional results at a great price!</p>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
         <dialog id="description3" class="modal flex justify-center items-center">

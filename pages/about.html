@@ -2,4 +2,105 @@
 layout: default
 title: About
 ---
+<style>
+    .btn.active {
+        background-color: #6b7280;
+        color: white;
+    }
 
+    .btn:hover {
+        background-color: #6b7280;
+    }
+</style>
+<div class="mt-16 mb-10 px-4 sm:px-6 lg:px-8 lg:ml-[16vw] lg:mr-[16vw]">
+    <h1 class="font-oxygen text-4xl font-light mt-10 mb-3 text-center">About Me</h1>
+    <div class="divider"></div>
+    <div class="hero">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="ml-10 mr-10 lg:w-1/2 lg:text-left">
+                <div class="lg:w-128">
+                    <p class="text-lg mb-4 font-oxygen font-light">
+                        Hey there! I'm David, and I'm passionate about freezing those special moments in time
+                        through photography.
+                    </p>
+                    <p class="text-lg mb-4 font-oxygen font-light">
+                        Based in San Diego, my love for photography has seeped into everything I do, from
+                        exploring aerospace to tinkering with robotics. Building delicate airplanes and precision robots
+                        has taught me the value of patience and attention to detail, skills that I now bring to my
+                        photography.
+                    </p>
+                    <p class="text-lg mb-4 font-oxygen font-light">
+                        Whether it's capturing the breathtaking landscapes of Big Sur or the bustling energy of a
+                        robotics competition, I strive to tell stories through my lens. I specialize in documenting
+                        special moments, whether it's a graduation ceremony or a drive along the ocean.
+                    </p>
+                    <p class="text-lg mb-4 font-oxygen font-light">
+                        When I'm not behind the camera, you'll find me passing on my knowledge to the next generation. I
+                        love teaching children about robotics, coaching Science Olympiad teams, or diving into personal
+                        projects that ignite my curiosity.
+                    </p>
+                </div>
+            </div>
+            <div class="lg:w-1/4 lg:mr-8 mb-4 lg:mb-0 flex flex-col items-center justify-center relative">
+                <div class="avatar lg:w-48 lg:h-48">
+                    <img src="/assets/img/pfp.jpg" alt="Avatar" class="rounded-full w-32 h-32 object-cover object-center">
+                </div>
+                <!-- Stats list -->
+                <ul class="mt-4 text-sm text-gray-600" id="instagram-stats">
+                    <li class="text-gray-400"><span class="font-bold text-4xl text-gray-600">Loading...</span> followers</li>
+                    <li class="text-gray-400"><span class="font-bold text-4xl text-gray-600">Loading...</span> posts</li>
+                    <li class="text-gray-400"><span class="font-bold text-4xl text-gray-600">42,096</span> photos taken</li>
+                    <li class="text-gray-400"><span class="font-bold text-4xl text-gray-600">318</span> photo awards</li>
+                </ul>
+                <a href="https://www.instagram.com/_david.v/" target="_blank" class="btn btn-outline self-align text-center mt-4 relative font-oxygen font-light">Follow</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const followersUrl = 'https://instagram-scraper-api2.p.rapidapi.com/v1/followers?username_or_id_or_url=_david.v';
+    const followingUrl = 'https://instagram-scraper-api2.p.rapidapi.com/v1/following?username_or_id_or_url=_david.v';
+    const postsUrl = 'https://instagram-scraper-api2.p.rapidapi.com/v1.2/posts?username_or_id_or_url=_david.v';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '701410bf7emshbaf1fa99b2e4e5bp1c0ee6jsn8f8f51602e3f',
+            'X-RapidAPI-Host': 'instagram-scraper-api2.p.rapidapi.com'
+        }
+    };
+
+    async function fetchInstagramStats() {
+        try {
+            // Fetch followers count
+            const followersResponse = await fetch(followersUrl, options);
+            const followersData = await followersResponse.json();
+            const followers = followersData.data.total;
+            console.log('Followers:', followers);
+
+            // Fetch posts count
+            const postsResponse = await fetch(postsUrl, options);
+            const postsData = await postsResponse.json();
+            const posts = postsData.data.count;
+            console.log('Posts:', posts);
+
+            // Update the HTML with the fetched data
+            document.getElementById('instagram-stats').innerHTML = `
+                <li class="text-gray-400 font-oxygen font-light"><span class="font-bold text-4xl text-gray-600">${followers}</span> followers</li>
+                <li class="text-gray-400 font-oxygen font-light"><span class="font-bold text-4xl text-gray-600">${posts}</span> posts</li>
+                <li class="text-gray-400 font-oxygen font-light"><span class="font-bold text-4xl text-gray-600">42,096</span> photos taken</span></li>
+                <li class="text-gray-400 font-oxygen font-light"><span class="font-bold text-4xl text-gray-600">318</span> photo awards</span></li>
+            `;
+        } catch (error) {
+            console.error(error);
+            document.getElementById('instagram-stats').innerHTML = `
+                <li>Error fetching data</li>
+                <li>Error fetching data</li>
+                <li>42,096<span class="font-bold">photos taken</span></li>
+            `;
+        }
+    }
+
+    fetchInstagramStats();
+</script>
